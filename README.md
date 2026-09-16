@@ -27,6 +27,8 @@ Yang diuji:
 | registry paket | `pypi.org`, `registry.npmjs.org` | jalur `pip install` / `npm i -g` |
 | GitHub API | sisa rate limit (unauth: 60/jam) | jalur `api.github.com/.../contents/...` |
 
+Catatan: angka jalur `codeload` bisa naik-turun karena CDN GitHub membatasi (throttle) per IP setelah unduhan besar — script sudah mencoba **3x** (raw) dan **2x** (tarball + `git ls-remote`), lalu memberi tahu bila hasilnya tidak konsisten. Kalau ragu, ulangi 1–2 menit lagi.
+
 Patokan hasil:
 
 - **≥5 MB/s** → jalur GitHub bagus, clone/pip/npm aman langsung.
